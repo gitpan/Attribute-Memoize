@@ -1,6 +1,8 @@
 Changes
-MANIFEST
 Makefile.PL
-Memoize.pm
+MANIFEST
 README
-test.pl
+lib/Attribute/Memoize.pm
+t/00-use.t
+t/01-memoize.t
+META.yml                                 Module meta-data (added by MakeMaker)

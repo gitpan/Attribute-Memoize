@@ -1,47 +1,40 @@
-NAME
-    Attribute::Memoize - Attribute interface to Memoize.pm
+Attribute-Memoize version 0.01
+==============================
 
-SYNOPSIS
-      use Attribute::Memoize;
-      sub fib :Memoize {
-              my $n = shift;
-              return $n if $n < 2;
-              fib($n-1) + fib($n-2);
-      }
-  
-      $|++;
-      print fib($_),"\n" for 1..50;
+The README is used to introduce the module and provide instructions on
+how to install the module, any machine dependencies it may have (for
+example C compilers and installed libraries) and any other information
+that should be provided before the module is installed.
 
-DESCRIPTION
-    This module makes it slightly easier (and modern) to memoize a function
-    by providing an attribute, `:Memoize' that makes it unnecessary for you
-    to explicitly call `Memoize::memoize()'. Options can be passed via the
-    attribute per usual (see the `Attribute::Handlers' manpage for details,
-    and the `Memoize' manpage for information on memoizing options):
+A README file is required for CPAN modules since CPAN extracts the
+README file from a module distribution so that people browsing the
+archive can use it get an idea of the modules uses. It is usually a
+good idea to provide version information here so that people can
+decide whether fixes for the module are worth downloading.
 
-      sub f :Memoize(NORMALIZER => 'main::normalize_f') {
-            ...
-      }
+INSTALLATION
 
-    However, since the call to `memoize()' is now done in a different
-    package, it is necessary to include the package name in any function
-    names passed as options to the attribute, as shown above.
+To install this module type the following:
 
-TODO
-    test.pl
-BUGS
-    None known so far. If you find any bugs or oddities, please do inform
-    the author.
+   perl Makefile.PL
+   make
+   make test
+   make install
 
-AUTHOR
-    Marcel Grünauer, <marcel@codewerk.com>
+DEPENDENCIES
 
-COPYRIGHT
-    Copyright 2001 Marcel Grünauer. All rights reserved.
+This module requires these other modules and libraries:
 
-    This library is free software; you can redistribute it and/or modify it
-    under the same terms as Perl itself.
+  blah blah blah
 
-SEE ALSO
-    perl(1), Attribute::Handlers(3pm).
+COPYRIGHT AND LICENCE
+
+Put the correct copyright and licence information here.
+
+Copyright (C) 2006 by Dan Kogai
+
+This library is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself, either Perl version 5.8.8 or,
+at your option, any later version of Perl 5 you may have available.
+
 
